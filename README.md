@@ -15,9 +15,6 @@ edge-ai-baby-cry-detection/
 ├── 2_model_training/
 ├── 3_openmv_firmware/
 ├── 4_integration_demo/
-├── scripts/
-│   ├── check_generated_wavs.py  # Validates WAV files (count, sample rate, RMS)
-│   └── archive_slurm_job.sh     # Archives SLURM logs and outputs
 ├── run_generate.sh              # Shell wrapper for generate.py
 ├── run_generate.slurm           # SLURM job submission script
 └── requirements.txt
@@ -79,13 +76,6 @@ tail -f out_<jobid>.txt
 tail -f err_<jobid>.txt
 ```
 
-#### 5) Validate generated WAV files
-
-```bash
-cd /scratch/ashishp/edge-ai-baby-cry-detection
-.venv/bin/python scripts/check_generated_wavs.py --require-nonempty
-```
-
 Optional — override class folders or expected sample rate:
 
 ```bash
@@ -95,33 +85,7 @@ Optional — override class folders or expected sample rate:
   --sample-rate 16000
 ```
 
-#### 6) Archive outputs and logs per SLURM job
-
-Archive logs and WAV outputs:
-
-```bash
-./scripts/archive_slurm_job.sh <jobid>
-```
-
-Archive only logs (no audio files):
-
-```bash
-./scripts/archive_slurm_job.sh <jobid> --no-audio
-```
-
-Archive then remove original logs and WAV files:
-
-```bash
-./scripts/archive_slurm_job.sh <jobid> --delete-originals
-```
-
-Archives are saved under:
-
-```
-archives/job_<jobid>_<timestamp>.tar.gz
-```
-
-#### 7) To regenerate from scratch
+#### 5) To regenerate from scratch
 
 ```bash
 cd /scratch/ashishp/edge-ai-baby-cry-detection
@@ -141,8 +105,8 @@ Generation is **resumable** — already-generated files are automatically skippe
 | Class              | Files | Format        | Duration | Sample Rate |
 |--------------------|-------|---------------|----------|-------------|
 | `baby_cry`         | 570   | WAV, PCM-16   | 5s each  | 16000 Hz    |
-| `background_noise` | 471   | WAV, PCM-16   | 5s each  | 16000 Hz    |
-| **Total**          | **1041** |            |          |             |
+| `background_noise` | 461   | WAV, PCM-16   | 5s each  | 16000 Hz    |
+| **Total**          | **1031** |            |          |             |
 
 - Generated using [AudioLDM](https://github.com/haoheliu/AudioLDM) (`audioldm-s-full`)
 - 190 baby cry prompts × 3 seeds + 157 background noise prompts × 3 seeds
