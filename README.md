@@ -110,7 +110,7 @@ Generation is **resumable** — already-generated files are automatically skippe
 
 - Generated using [AudioLDM](https://github.com/haoheliu/AudioLDM) (`audioldm-s-full`)
 - 190 baby cry prompts × 3 seeds + 157 background noise prompts × 3 seeds
-- WAV files are **not committed to git** — download from Google Drive below
+- WAV files — download from Google Drive below
 
 **Google Drive:** `https://drive.google.com/drive/folders/1he9v7fSK9GHA7CfeW1HjqMbHArcD-Qi1?usp=sharing`
 
@@ -131,5 +131,4 @@ Generation is **resumable** — already-generated files are automatically skippe
   print('\n'.join(flagged))
   "
   ```
-- Manually listen to ~20% of files as a quality check before handing off to Member 2
-- Do **not** commit `.audioldm-cache/`, `.hf-cache/`, `.venv/`, or `*.wav` files to git
+
