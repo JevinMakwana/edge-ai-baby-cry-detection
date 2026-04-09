@@ -33,6 +33,12 @@ Thumbs.db
 .hf-cache/
 .torch-kernels/
 
+# Generated audio datasets
+1_dataset_generation/audio_samples/baby_cry/
+1_dataset_generation/audio_samples/background_noise/
+*.wav
+generation_log.jsonl
+
 # Slurm/output archives
 err_*.txt
 out_*.txt
@@ -43,6 +49,3 @@ archives/
 
 # Python compiled files
 *.pyc
-
-# Large dataset directory
-donateacry-corpus-master/
