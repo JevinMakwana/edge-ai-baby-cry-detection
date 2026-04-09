@@ -1,0 +1,6 @@
+label,precision,recall,f1,support
+belly_pain,0.4,1.0,0.5714285714285714,2
+burping,0.25,1.0,0.4,1
+discomfort,0.0,0.0,0.0,4
+hungry,0.875,0.8448275862068966,0.8596491228070176,58
+tired,0.0,0.0,0.0,4

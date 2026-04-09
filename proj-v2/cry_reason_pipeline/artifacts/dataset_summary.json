@@ -1,0 +1,22 @@
+{
+  "num_samples": 457,
+  "class_counts": {
+    "belly_pain": 16,
+    "burping": 8,
+    "discomfort": 27,
+    "hungry": 382,
+    "tired": 24
+  },
+  "sample_rates": {
+    "8000": 457
+  },
+  "channels": {
+    "1": 457
+  },
+  "duration": {
+    "min": 6.52,
+    "max": 7.06,
+    "mean": 6.9183,
+    "median": 6.96
+  }
+}

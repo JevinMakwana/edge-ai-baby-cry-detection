@@ -1,0 +1,12 @@
+{
+  "name": "aug_b",
+  "macro_f1": 0.3662155388471178,
+  "test_accuracy": 0.7536231875419617,
+  "aug_noise_std": 0.003,
+  "aug_time_shift_max": 0.03,
+  "aug_gain_min": 0.8,
+  "aug_gain_max": 1.2,
+  "aug_time_mask_max": 8,
+  "aug_freq_mask_max": 8,
+  "run_dir": "D:\\IISc\\sem2\\EdgeAI\\Project\\proj-v2\\cry_reason_pipeline\\artifacts\\sweeps\\aug_b"
+}

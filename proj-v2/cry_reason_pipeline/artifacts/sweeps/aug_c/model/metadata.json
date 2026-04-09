@@ -1,0 +1,23 @@
+{
+  "labels_sorted": [
+    "belly_pain",
+    "burping",
+    "discomfort",
+    "hungry",
+    "tired"
+  ],
+  "label_to_index": {
+    "belly_pain": 0,
+    "burping": 1,
+    "discomfort": 2,
+    "hungry": 3,
+    "tired": 4
+  },
+  "index_to_label": {
+    "0": "belly_pain",
+    "1": "burping",
+    "2": "discomfort",
+    "3": "hungry",
+    "4": "tired"
+  }
+}

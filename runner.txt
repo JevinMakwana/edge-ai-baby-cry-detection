@@ -1,0 +1,23 @@
+`````````````````````````````````````
+v2:
+`````````````````````````````````````
+python.exe 06_run_pipeline.py --skip-audit --skip-splits --epochs 80 --batch-size 16 --n-mels 40 --n-fft 512 --hop-length 160 --early-stop-patience 16 --lr-plateau-patience 5 --balanced-sampling --augment-minority --aug-noise-std 0.003 --aug-time-shift-max 0.03 --aug-gain-min 0.8 --aug-gain-max 1.2 --aug-time-mask-max 8 --aug-freq-mask-max 8 --quantize --skip-smoke-infer
+
+
+
+
+
+
+`````````````````````````````````````
+v1:
+`````````````````````````````````````
+Single-script pipeline usage:
+Run full sequence (audit -> splits -> train -> export -> smoke inference) with your hyperparameters:
+python.exe 06_run_pipeline.py --epochs 80 --batch-size 16 --n-mels 40 --n-fft 512 --hop-length 160 --sample-rate 8000 --clip-seconds 7.0 --early-stop-patience 12 --lr-plateau-patience 4 --quantize
+
+Example for a different hyperparameter set:
+python.exe 06_run_pipeline.py --epochs 120 --batch-size 8 --n-mels 64 --n-fft 256 --hop-length 80 --sample-rate 8000 --clip-seconds 6.0 --early-stop-patience 20 --lr-plateau-patience 6 --quantize
+
+
+
+
